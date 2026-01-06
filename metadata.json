@@ -1,0 +1,5 @@
+{
+  "name": "Chronos",
+  "description": "A high-speed word game with a precision timer. Local-only performance for instant feedback and automatic submission.",
+  "requestFramePermissions": []
+}
