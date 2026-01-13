@@ -26,11 +26,12 @@ const Tile: React.FC<TileProps> = ({ letter = '', status, delay = 0 }) => {
   const revealClass = getRevealClass();
 
   return (
-    <div 
+    <div
       style={animationStyle}
       className={`
-        w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center 
-        text-2xl sm:text-3xl font-bold border-2 select-none uppercase
+        aspect-square w-[calc((100vw-48px)/5)] max-w-[62px] sm:max-w-[68px]
+        flex items-center justify-center
+        text-[2rem] sm:text-[2.25rem] font-bold border-2 select-none uppercase
         transition-all duration-300
         ${revealClass || borderClass}
         text-white

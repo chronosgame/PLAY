@@ -29,7 +29,7 @@ const GameBoard: React.FC<GameBoardProps> = ({
     return (
       <div
         key={`row-${rowIndex}`}
-        className={`flex gap-1.5 ${isCurrent && isInvalid ? 'animate-shake' : ''}`}
+        className={`flex gap-1 sm:gap-1.5 ${isCurrent && isInvalid ? 'animate-shake' : ''}`}
       >
         {Array.from({ length: WORD_LENGTH }).map((_, i) => {
           const char = isCurrent ? currentGuess[i] : guess ? guess[i] : '';
@@ -42,8 +42,8 @@ const GameBoard: React.FC<GameBoardProps> = ({
   const emptyRowsCount = MAX_GUESSES - guesses.length - (status === GameStatus.PLAYING ? 1 : 0);
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center w-full max-w-lg px-4 relative mb-6">
-      <div className="grid grid-rows-6 gap-2.5">
+    <div className="flex-1 flex flex-col items-center justify-center w-full px-4 relative min-h-0">
+      <div className="grid grid-rows-6 gap-[5px] sm:gap-[6px]">
         {guesses.map((g, i) => renderRow(g, i))}
         {status === GameStatus.PLAYING && renderRow('', guesses.length, true)}
         {Array.from({ length: Math.max(0, emptyRowsCount) }).map((_, i) =>

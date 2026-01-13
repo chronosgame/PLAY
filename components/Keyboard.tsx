@@ -20,9 +20,9 @@ const Keyboard: React.FC<KeyboardProps> = ({ onKey, letterStatuses }) => {
   };
 
   return (
-    <div className="w-full max-w-2xl px-2 mt-8 mb-4">
+    <div className="w-full px-2 pb-[env(safe-area-inset-bottom,8px)] pt-2 flex-shrink-0 mt-auto">
       {KEYBOARD_ROWS.map((row, i) => (
-        <div key={i} className="flex justify-center mb-2 gap-1.5 touch-none">
+        <div key={i} className="flex justify-center mb-2 gap-[6px] touch-none">
           {row.map((key) => {
             const isSpecial = key === 'ENTER' || key === 'BACK';
             return (
@@ -30,8 +30,10 @@ const Keyboard: React.FC<KeyboardProps> = ({ onKey, letterStatuses }) => {
                 key={key}
                 onClick={() => onKey(key)}
                 className={`
-                  ${isSpecial ? 'px-3 sm:px-4 text-xs font-bold' : 'flex-1 max-w-[44px] sm:h-14 font-semibold'}
-                  h-14 rounded flex items-center justify-center transition-colors
+                  ${isSpecial
+                    ? 'text-[11px] font-bold flex-[1.5]'
+                    : 'flex-1 font-semibold text-xl'}
+                  h-[58px] rounded flex items-center justify-center transition-colors select-none active:scale-95 active:opacity-80
                   ${getKeyStyle(key)}
                 `}
               >
