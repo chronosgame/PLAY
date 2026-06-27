@@ -19,7 +19,7 @@ export const TARGET_WORDS = [
   "asset", "audio", "audit", "avoid", "award", "aware", "awful", "basic", "basis", "begin",
   "below", "bench", "birth", "black", "blade", "block", "blood", "board", "boost", "booth",
   "bound", "brain", "brand", "break", "brief", "bring", "broad", "brown", "build", "built",
-  "buyer", "cable", "calm", "canal", "carry", "catch", "cause", "chain", "chair", "chart",
+  "buyer", "cable", "camal", "canal", "carry", "catch", "cause", "chain", "chair", "chart",
   "check", "chest", "chief", "child", "china", "chose", "civil", "claim", "class", "clean",
   "clear", "click", "clock", "close", "coach", "coast", "count", "court", "cover", "craft",
   "crash", "cream", "crime", "cross", "crowd", "crown", "curve", "cycle", "daily", "dance",
